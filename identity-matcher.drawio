@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-08-02T15:23:52.370Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ByaD3FJGME5mAXQoMZ5v" version="20.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-03T15:58:42.884Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="AaulP8-TyYycQwLUhJOc" version="20.0.3" type="github">
   <diagram id="_MFETMW5BQF27gGuJFpG" name="Page-1">
     <mxGraphModel dx="1422" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="A1XFiOuGBfOw8y14Zu5k-1" value="nu" style="swimlane;" vertex="1" parent="1">
+        <mxCell id="A1XFiOuGBfOw8y14Zu5k-1" value="faza 1" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="320" y="50" width="780" height="660" as="geometry" />
         </mxCell>
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-2" value="/checkUniquenessNonBlocked" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="A1XFiOuGBfOw8y14Zu5k-1">
@@ -37,10 +37,14 @@
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="A1XFiOuGBfOw8y14Zu5k-1" source="A1XFiOuGBfOw8y14Zu5k-25" target="A1XFiOuGBfOw8y14Zu5k-30">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="370" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="340" />
+              <mxPoint x="370" y="340" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="A1XFiOuGBfOw8y14Zu5k-25" value="foreach match: daca nu a fost validat cu buletinul in ultimii 3 ani, se trimite actiune de blocare" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="A1XFiOuGBfOw8y14Zu5k-1">
-          <mxGeometry x="310" y="220" width="120" height="80" as="geometry" />
+        <mxCell id="A1XFiOuGBfOw8y14Zu5k-25" value="foreach match: daca nu a fost validat cu buletinul in ultimii 3 ani, se trimite actiune de blocare, altfel elimin matchingul din lista de matched" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="A1XFiOuGBfOw8y14Zu5k-1">
+          <mxGeometry x="310" y="220" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-35" value="update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="A1XFiOuGBfOw8y14Zu5k-1" source="A1XFiOuGBfOw8y14Zu5k-30" target="A1XFiOuGBfOw8y14Zu5k-34">
           <mxGeometry relative="1" as="geometry" />
@@ -89,6 +93,9 @@
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-44" value="is_unique=false&lt;br&gt;block=false&lt;br&gt;lista_matched" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="A1XFiOuGBfOw8y14Zu5k-1">
           <mxGeometry x="680" y="405" width="70" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="A1XFiOuGBfOw8y14Zu5k-46" value="trust level&amp;nbsp;&lt;br&gt;false sa nu blocam mathings???" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="A1XFiOuGBfOw8y14Zu5k-1">
+          <mxGeometry x="510" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="A1XFiOuGBfOw8y14Zu5k-3" target="A1XFiOuGBfOw8y14Zu5k-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -107,8 +114,8 @@
             <mxPoint x="439.5" y="-178" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="A1XFiOuGBfOw8y14Zu5k-9" value="&lt;h1&gt;Payload&lt;/h1&gt;&lt;span style=&quot;text-align: center;&quot;&gt;mandatory fields(non-null, non-empty): [firstName, lastName, birthDate, phone, cityId, actionType anyOf(&quot;update&quot;, &quot;create&quot;), externalSystemType anyOf(ONE_TO_ONE, DMF, MAGENTO), validationLevel anyOf(TRUST, NO_TRUST),&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;allocatedConsumerId&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;]&lt;br&gt;optional fields: [email, ip, passHash, gender,&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;status,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;webAccountCreationDate, ]&lt;br&gt;&lt;/span&gt;&lt;p&gt;ATENTIE: determinarea flag-ului web-account/non-web-account se face pe baza fieldului webAccountCreationDate: daca exista =&amp;gt; contul este web, daca nu =&amp;gt; contul nu este web&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="20" y="-320" width="830" height="160" as="geometry" />
+        <mxCell id="A1XFiOuGBfOw8y14Zu5k-9" value="&lt;h1&gt;Payload&lt;/h1&gt;&lt;span style=&quot;text-align: center;&quot;&gt;mandatory fields(non-null, non-empty): [firstName, lastName, birthDate, phone, cityId, actionType anyOf(&quot;update&quot;, &quot;create&quot;), externalSystemType anyOf(ONE_TO_ONE, DMF, MAGENTO), validationLevel anyOf(TRUST, NO_TRUST),&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;allocatedConsumerId&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;]&lt;br&gt;optional fields: [email, ip, passHash, gender,&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;status,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;webAccountCreationDate, ]&lt;br&gt;&lt;/span&gt;&lt;p&gt;ATENTIE: determinarea flag-ului web-account/non-web-account se face pe baza fieldului webAccountCreationDate: daca exista =&amp;gt; contul este web, daca nu =&amp;gt; contul nu este web&lt;/p&gt;&lt;p&gt;sistemele externe nu merg mai departe pana nu primesc un id_crm sau NOT_FOUND de la /get-consumer&lt;/p&gt;&lt;p&gt;pe baza acelui id_crm sau NOT_FOUND se decide daca este create/update de catre sistemul extern&lt;/p&gt;&lt;p&gt;** apply_rules-&amp;gt; reguli care se aplica in functie de system si de action_type&lt;/p&gt;&lt;p&gt;faza 1 -&amp;gt; change consumer salveaza un record in BD, face flow-ul normal si la final apeleaza /checkUniquenessNonBlocked, de aceea tb sa dam actiune de blocare&lt;/p&gt;&lt;p&gt;pt validarea premiilor: last_validation (premiu cu CI) si last_validation_banned_account(???). Florin: care sunt actiunile care ne seteaza validarea cu CI&lt;/p&gt;&lt;p&gt;inainte de fiecare change-consumer se apeleaza get-consumer pentru a se decide de satelit daca este create/update&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-610" width="830" height="350" as="geometry" />
         </mxCell>
         <mxCell id="A1XFiOuGBfOw8y14Zu5k-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="A1XFiOuGBfOw8y14Zu5k-2">
           <mxGeometry relative="1" as="geometry">
