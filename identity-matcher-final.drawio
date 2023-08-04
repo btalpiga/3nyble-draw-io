@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-03T19:38:22.006Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="KtmFo4PjSusielM15lEE" version="20.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-04T12:39:40.261Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="LMh2O4lbu-iMxihtr3gT" version="20.0.3" type="github">
   <diagram id="lqVBNYXFsRpJYitEDP_o" name="Page-1">
-    <mxGraphModel dx="1422" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1377" dy="1799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-4" target="RK0Nxq7NHTd2RhBu0PTS-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-2" value="/getConsumer(id_crm,phone)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-2" value="/getConsumer(phone)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="260" y="110" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-4" target="RK0Nxq7NHTd2RhBu0PTS-1">
@@ -39,8 +39,8 @@
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-4" value="/changeConsumer" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="260" y="230" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-7" value="&lt;h1&gt;Legenda&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;1. Sistemele externe interogheaza CRM pt a afla daca exista deja un CRM_ID alocat pe acel nr de telefon.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;2.La apelare change consumer se trimit urmatoarele:&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;mandatory fields(non-null, non-empty): [firstName, lastName, birthDate, phone, cityId, actionType anyOf(&quot;update&quot;, &quot;create&quot;), externalSystemType anyOf(ONE_TO_ONE, DMF, MAGENTO), validationLevel anyOf(TRUST, NO_TRUST),allocatedConsumerId]&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;optional fields: [email, ip, passHash, gender,status,&amp;nbsp;webAccountCreationDate]&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;ATENTIE: daca s-a selectat un CRM_ID in urma apelului /getConsumer, acela se trimite pe allocatedConsumerId, altfel null.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;3. Tipul actiunii update/create trebuie sa fie determinat de sistemele externe (daca s-a returnat crm_id si se apeleaza cu el sau nu).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;** apply_rules-&amp;gt; reguli care se aplica in functie de system si de action_type&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;4. In urma raspunsului din /checkUniqueness..., /changeConsumer trebuie fie ca creeze un nou id (create=true), fie sa updateze (update=true), si sa seteze&amp;nbsp; flagul de validated daca validationLevel=TRUST. + sa trimita actiunile de blocare pentru toti cei returnati in matched_rules&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="100" y="-250" width="860" height="310" as="geometry" />
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-7" value="&lt;h1&gt;Legenda&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;1. Sistemele externe interogheaza CRM pt a afla daca exista deja un CRM_ID alocat pe acel nr de telefon.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;2.La apelare change consumer se trimit urmatoarele:&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;mandatory fields(non-null, non-empty): [firstName, lastName, birthDate, phone, cityId, externalSystemType anyOf(ONE_TO_ONE, DMF, MAGENTO, ?WinPrize), validationLevel anyOf(TRUST, NO_TRUST), interactionType] //&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;actionType anyOf(&quot;update&quot;, &quot;create&quot;),&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;allocatedConsumerId&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;optional fields: [email, ip, passHash, gender,] //&lt;/span&gt;&lt;/p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;webAccountCreationDate,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;status&lt;/span&gt;&lt;br&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;ATENTIE: daca s-a selectat un CRM_ID in urma apelului /getConsumer, acela se trimite pe allocatedConsumerId, altfel null.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;3. Tipul actiunii update/create trebuie sa fie determinat de sistemele externe (daca s-a returnat crm_id si se apeleaza cu el sau nu).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;** apply_rules-&amp;gt; reguli care se aplica in functie de system si de action_type&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;4. In urma raspunsului din /checkUniqueness..., /changeConsumer trebuie fie ca creeze un nou id (create=true), fie sa updateze (update=true), si sa seteze&amp;nbsp; flagul de validated daca validationLevel=TRUST. + sa trimita actiunile de blocare pentru toti cei returnati in matched_rules&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;Observatii:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;-&amp;gt; din satelit vine city si trebuie mapat in change-consumer la city_id&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; change consumer apeleaza sistemul extern DMF + date -&amp;gt; iau un id de CRM +isWebUser -&amp;gt; daca desi actiunea pare a fi un update (este upgrade&amp;nbsp; la Web / isWebUser este false), regulile aplicabile trebuie sa fie cele de create cont Web&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; DECIZIE OPERATIONALA BUSINESS: pt 121 infoline, ar tb sa nu se mai apeleze change-consumer daca nr de telefon nu este validat&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; statusul ignore -&amp;gt; este returnat in cazul consumatorilor cu telefon nevalidat care are matching&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; statusul reject -&amp;gt; este pe cazul telefon validat DAR not_trusted si are matchings&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; daca interactionType este de tip plum, nr de telefon nu exista in DB, dar are matching cu altcineva, sistem_extern=RMC =&amp;gt; facem CRM_ID cu datele declarate dar blocat + profil de plum daca nu exista, iar matching-ul ramane neatins&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;--&amp;gt; daca interactionType este de tip plum, nr de telefon exista in DB, dar are matching cu altcineva, sistem_extern=RMC =&amp;gt; facem CRM_ID cu datele declarate dar blocat + profil de plum daca nu exista, iar matching-ul ramane neatins&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-540" width="860" height="570" as="geometry" />
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-9" target="RK0Nxq7NHTd2RhBu0PTS-4">
           <mxGeometry relative="1" as="geometry">
@@ -50,13 +50,20 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-14" value="unique=true/false&lt;br&gt;create=true/false&lt;br&gt;update=true/false&lt;br&gt;matched_rules=[{consumer_id, rule_id}]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RK0Nxq7NHTd2RhBu0PTS-13">
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-14" value="unique=true/false&lt;br&gt;create=true/false&lt;br&gt;update=true/false&lt;br&gt;matched_rules=[{consumer_id, rule_id}]&lt;br&gt;in functie de create/update /changeConsumer salveaza/updateaza" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RK0Nxq7NHTd2RhBu0PTS-13">
           <mxGeometry x="0.2" relative="1" as="geometry">
-            <mxPoint y="20" as="offset" />
+            <mxPoint x="10" y="40" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-9" target="RK0Nxq7NHTd2RhBu0PTS-19">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.382;entryY=1.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-9" target="RK0Nxq7NHTd2RhBu0PTS-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="181" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-9" value="/checkUniquenessNonBlocked" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="540" y="230" width="210" height="60" as="geometry" />
@@ -94,10 +101,15 @@
           <mxGeometry x="850" y="220" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-21" value="unique=true&lt;br&gt;create=true/false&lt;br&gt;update=false/true" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="200" width="100" height="90" as="geometry" />
+          <mxGeometry x="1050" y="215" width="100" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-25" target="RK0Nxq7NHTd2RhBu0PTS-35">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="560" />
+              <mxPoint x="980" y="560" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-25" value="foreach match: daca nu a fost validat cu buletinul in ultimii 3 ani, se trimite actiune de blocare pentru el, altfel elimin matchingul din lista de matched" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="430" width="160" height="100" as="geometry" />
@@ -110,11 +122,21 @@
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-26" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="690" y="420" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-32" value="unique=false&lt;br&gt;create=false&lt;br&gt;update=false" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="410" y="420" width="80" height="80" as="geometry" />
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-32" value="unique=false&lt;br&gt;action=create/create_not_validated/update/reject/ignore&lt;br&gt;message=pt_reject&lt;br&gt;idConsumator=null/existent&lt;br&gt;blockConsumers=[]" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="230" y="440" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="RK0Nxq7NHTd2RhBu0PTS-35" value="unique=false&lt;br&gt;create=true/false&lt;br&gt;update=false/true" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="930" y="630" width="120" height="60" as="geometry" />
+          <mxGeometry x="930" y="630" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RK0Nxq7NHTd2RhBu0PTS-37" target="RK0Nxq7NHTd2RhBu0PTS-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="698" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RK0Nxq7NHTd2RhBu0PTS-37" value="/getConsumer(phone)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="220" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
